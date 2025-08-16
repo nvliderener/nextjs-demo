@@ -10,3 +10,11 @@ export const FooterList = [
     { title: "Collections", list: ['last drops', 'weekly picks', 'sefsdf'] },
     { title: "code", list: ['github', 'document'] },
 ]
+
+
+export const SortTitle = 'Sort';
+export const SortList = [
+    { value: 'latest', text: 'Latest Arrival' },
+    { value: 'higt', text: 'Price:Low -&gt Higt' },
+    { value: 'low', text: 'Price:Hight -&gt Low' },
+]
