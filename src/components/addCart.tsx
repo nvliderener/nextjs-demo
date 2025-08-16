@@ -8,7 +8,7 @@ import { useState } from 'react'
 function AddCart({ product }: { product: ProuductTypes }) {
     console.log('product', product)
     const [value, setValue] = useState<string>('')
-    const onValueChange = (value) => {
+    const onValueChange = (value: string) => {
         console.log(value);
         setValue(value)
     }

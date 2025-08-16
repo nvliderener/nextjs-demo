@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton"
 
-function Loading(props) {
+function Loading() {
     return (
         <div className="container flex">
             <div className="w-64 py-4" >
