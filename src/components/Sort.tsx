@@ -1,10 +1,13 @@
 'use client'
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
 import { SortTitle, SortList } from '../lib/constants'
+import { SortValue } from '@/types/global'
+import { useSortStore } from '@/store/index'
 
 function Sort() {
-    const onValueChange = (value: string) => {
-        console.log(value);
+    const { setValue } = useSortStore()
+    const onValueChange = (value: SortValue) => {
+        setValue(value);
     }
     return (
         <div className="w-64 border py-4 text-center">

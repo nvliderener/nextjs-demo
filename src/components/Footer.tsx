@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Separator } from "./ui/separator"
 import { Title, FooterList } from '../lib/constants'
-
+import { Fragment } from 'react';
 function Footer() {
     console.log('Footer')
     return (
@@ -10,16 +10,16 @@ function Footer() {
                 <div className="text-2xl">
                     <Link href='/'> {Title}</Link>
                 </div>
-                <div className="flex grid-cols-3 gap-4">
-                    {FooterList.map((item, i) => <>
+                <div className="flex gap-4">
+                    {FooterList.map((item, i) => <Fragment key={item.title}>
                         {i !== 0 && <Separator orientation="vertical" />}
-                        <div key={item.title} className="bg-amber-200">
+                        <div>
                             <span>{item.title}</span>
                             <ul>
                                 {item.list.map(l => <li key={`${i}-${l}`}>{l}</li>)}
                             </ul>
                         </div>
-                    </>
+                    </Fragment>
                     )}
                 </div>
             </div>

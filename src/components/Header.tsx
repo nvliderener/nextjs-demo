@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Separator } from "./ui/separator"
 import { Title, MenuList } from '@/lib/constants';
+import { Fragment } from 'react';
 
 
 function Header() {
@@ -13,10 +14,10 @@ function Header() {
                 </div>
                 <div className='flex space-x-2 text-sm h-5'>
                     {
-                        MenuList.map((item, i) => <>
+                        MenuList.map((item, i) => <Fragment key={item.text}>
                             {i !== 0 && <Separator orientation="vertical" />}
                             <Link key={item.text} href={item.href}>{item.text}</Link>
-                        </>)
+                        </Fragment>)
                     }
                 </div>
             </div>
