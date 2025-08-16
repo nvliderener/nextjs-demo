@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Separator } from "./ui/separator"
 import { Title, FooterList } from '../lib/constants'
 
-function Footer(props) {
+function Footer() {
     console.log('Footer')
     return (
         <div className="border-t mt-6">
